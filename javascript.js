@@ -1,10 +1,12 @@
     let containerdiv = document.querySelector(".container");
     let allboxes = document.querySelector(".boxes");
     let gridsize = document.querySelector(".gridsize");
+    let clear = document.querySelector(".clear");
 
 
 
     const colordigits = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+    let allchild = containerdiv.childNodes; 
 
     
     
@@ -57,3 +59,11 @@
         
     
     });
+
+    clear.addEventListener("click", function() {
+      for (let i = 0; i < allchild.length; i++) {
+        allchild[i].style.background = "";
+      };
+    })
+
+    
